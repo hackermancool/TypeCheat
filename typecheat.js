@@ -24,49 +24,79 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
     console.log("Site: 10FastFingers");
     console.log("~~~~~~~~~~~~~~~~~~~");
     site = 0;
-}
 // ---------- WIP ----------
-// else if(url == "www.ratatype.com"|| url == "ratatype.com") {
+// } else if(url == "www.ratatype.com"|| url == "ratatype.com") {
 //     console.log("~~~~~~~~~~~~~~~~~~~");
 //     console.log(" TypeCheat Active! ");
 //     console.log("Site:      Ratatype");
 //     console.log("~~~~~~~~~~~~~~~~~~~");
 //     site = 1;
-// }
-
-// Start cheating
-if(site == 0) {
-    // Interval
-    let cWord = 0;
-    // Make sure to constantly update the field
-    setInterval(function() {
-        if(document.getElementById("inputfield").value == "") {
-            document.getElementById("inputfield").value = words[cWord];
-            cWord++;
-        }
-    }, 10);
+} else if(url == "typingtestnow.com" || url == "www.typingtestnow.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~");
+    console.log(" TypeCheat Active! ");
+    console.log("Site: TypingTestNow");
+    console.log("~~~~~~~~~~~~~~~~~~~");
+    site = 2;
 }
-// ---------- WIP ----------
-// else if(site == 1) {
-//     // Generate wordlist
-//     let text = document.getElementsByClassName("mainTxt")[0];
-//     let field = document.getElementsByClassName("divTextarea")[0].children[0];
-//     let words = [];
-//     for(let i = 0; i < text.children.length; i++) {
-//         if(text.children[i].innerText != " ") {
-//             words.push(text.children[i].innerText);
-//         }
-//     }
-//     console.log(words);
-//     let i = 1;
-//     field.value = words[0];
-//     // Make sure to constantly update the field
-//     setInterval(function() {
-//         if(field.value.slice(-1) == " " || !field.value.includes(words[i])) {
-//             field.value += words[i];
-//             // Make sure that the word was actually added to the text field
-//             if(field.value.includes(words[i])) i++;
-//             console.log(field.value.includes(words[i]));
-//         }
-//     }, 10);
-// }
+
+// Cheat
+switch(site) {
+    // 10FastFingers
+    case 0:
+        // Interval
+        let cWord = 0;
+        // Make sure to constantly update the field
+        setInterval(function() {
+            if(document.getElementById("inputfield").value == "") {
+                document.getElementById("inputfield").value = words[cWord];
+                cWord++;
+            }
+        }, 10);
+        break;
+    // ---------- WIP ----------
+    // // Ratatype
+    // case 1:
+    //     // Generate wordlist
+    //     let text = document.getElementsByClassName("mainTxt")[0];
+    //     let field = document.getElementsByClassName("divTextarea")[0].children[0];
+    //     let words = [];
+    //     for(let i = 0; i < text.children.length; i++) {
+    //         if(text.children[i].innerText != " ") {
+    //             words.push(text.children[i].innerText);
+    //         }
+    //     }
+    //     let i = 1;
+    //     field.value = words[0];
+    //     // Make sure to constantly update the field
+    //     setInterval(function() {
+    //         if(field.value.slice(-1) == " " || !field.value.includes(words[i])) {
+    //             field.value += words[i];
+    //             // Make sure that the word was actually added to the text field
+    //             if(field.value.includes(words[i])) i++;
+    //             console.log(field.value.includes(words[i]));
+    //         }
+    //     }, 10);
+    //     break;
+    // // TypingTestNow
+    case 2:
+        // Generate wordlist
+        let text = document.getElementsByClassName("sample-text")[0];
+        let words = [];
+        for(let i = 0; i < text.children.length; i++) {
+            for(let j = 0; j < text.children[i].children.length; j++) {
+                words.push(text.children[i].children[j].innerText);
+            }
+        }
+        console.log(words);
+        // Interval
+        let i = 0;
+        // Make sure to constantly update the field
+        let field = document.getElementById("practice-input");
+        setInterval(function() {
+            if(field.value == " " || field.value == "") {
+                field.value = words[i];
+                i++;
+            }
+        }), 10;
+        break;
+}

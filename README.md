@@ -2,9 +2,12 @@
 A JS script to cheat on certain online typing tests.
 
 ## Supported sites
+As of now, the sites that work are:
 - [10FastFingers](https://10fastfingers.com/)
 <!-- - [Ratatype](https://www.ratatype.com/) -->
 <!-- ^^^WIP^^^ -->
+- [TypingTestNow](https://typingtestnow.com/)
+
 I am planning to add support for more.
 
 ## Use
