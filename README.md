@@ -10,6 +10,11 @@ As of now, the sites that work are:
 
 I am planning to add support for more.
 
+## Anticheat systems
+### 10FastFingers
+If you go above a certain WPM (not sure exactly what), you will be forced to take an anticheat test to confirm your result. The timer starts as soon as you press the "Start" button, and is a randomly generated image instead of a normal text-based system.  
+**If you use TypeCheat too much/at all on 10FastFingers, you will get banned from the site. I recommend using an alternate account for this, as if it's banned you can just delete and re-create it.**
+
 ## Use
 ### Copy+Paste
 0. Ensure that you're on a supported site
@@ -29,8 +34,3 @@ If you have the [Tampermonkey Extension](https://chrome.google.com/webstore/deta
 The script will now autorun on supported sites.
 
 **Note: On 10FastFingers, if you end up going through the entire text, the words will continue to autofill. If you continue to press space it can cause you to get incorrect words marked, despite the text being over.**
-
-
-## Anticheat systems
-### 10FastFingers
-If you go above a certain WPM (not sure exactly what), you will be forced to take an anticheat test to confirm your result. The timer starts as soon as you press the "Start" button, and is a randomly generated image instead of a normal text-based system.
