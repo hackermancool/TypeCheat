@@ -43,20 +43,19 @@ switch(site) {
         }
         // Interval
         let cWord = 0;
-        // Make sure to constantly update the field
+        // Different method for different modes
         let tField = null;
         if(altMode == 0) {
             tField = document.getElementById("inputfield");
         } else if(altMode == 1) {
             tField = document.getElementById("text_typed");
         }
-        // Different method for different modes
-        setInterval(function() {
-            if(tField.value == "") {
+        tField.addEventListener("keyup", function(e) {
+            if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
                 cWord++;
             }
-        }, 10);
+        });
         break;
     // Ratatype
         // case 1:
@@ -95,13 +94,12 @@ switch(site) {
         }
         // Interval
         let i = 0;
-        // Make sure to constantly update the field
         let field = document.getElementById("practice-input");
-        setInterval(function() {
-            if(field.value == " " || field.value == "") {
+        field.addEventListener("keydown", function(e) {
+            if(e.keyCode == 32) {
                 field.value = words[i];
                 i++;
             }
-        }), 10;
+        });
         break;
 }
