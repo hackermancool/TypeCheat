@@ -1,6 +1,6 @@
 /*
  *    TypeCheat - A JS script to cheat on certain online typing tests
- *    Copyright (C) 2020  Adam Thompson-Sharpe
+ *    Copyright (C) 2020  hackermancool
  *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by

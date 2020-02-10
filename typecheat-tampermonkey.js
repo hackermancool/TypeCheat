@@ -3,7 +3,7 @@
 // @namespace    https://github.com/MysteryBlokHed/TypeCheat
 // @version      v1.0.0-beta.2
 // @description  A JS script to cheat on certain online typing tests.
-// @author       Adam Thompson-Sharpe
+// @author       hackermancool
 // @match        https://10fastfingers.com/*
 // @match        https://www.ratatype.com/*
 // @match        https://typingtestnow.com/*
