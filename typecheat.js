@@ -23,9 +23,9 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~");
     site = 0;
     if(window.location.href.split("/")[3] == "text") altMode = 1;
-// } else if(url == "www.ratatype.com"|| url == "ratatype.com") {
-//     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:      Ratatype\n~~~~~~~~~~~~~~~~~~~");
-//     site = 1;
+} else if(url == "play.typeracer.com" || url == "typeracer.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~");
+    site = 1;
 } else if(url == "typingtestnow.com" || url == "www.typingtestnow.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
     site = 2;
@@ -35,6 +35,7 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
 switch(site) {
     // 10FastFingers (Normal)
     case 0:
+        console.log("BROKEN");
         // Generate wordlist
         let tText = document.getElementById("row1");
         let tWords = [];
@@ -57,31 +58,21 @@ switch(site) {
             }
         });
         break;
-    // Ratatype
-        // case 1:
-        //     // Generate wordlist
-        //     let text = document.getElementsByClassName("mainTxt")[0];
-        //     let words = [];
-        //     for(let i = 0; i < text.children.length; i++) {
-        //         if(text.children[i].innerText != " ") {
-        //             words.push(text.children[i].innerText);
-        //         }
-        //     }
-        //     console.log(words);
-        //     // Interval
-        //     let i = 0;
-        //     // Make sure to constantly update the field
-        //     let field = document.getElementsByClassName("divTextarea")[0].children[0];
-        //     let expectedText = "";
-        //     setInterval(function() {
-        //         if(field.value.slice(-1) == " " || field.value == "") {
-        //             if(i > 0) expectedText += " ";
-        //             expectedText += words[i];
-        //             field.value = expectedText;
-        //             i++;
-        //         }
-        //     }, 10);
-        //     break;
+    // TypeRacer
+    case 1:
+        // Generate wordlist
+        let textElement = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td");
+        let wordlist = textElement.innerText.split(" ");
+        // Interval
+        let crWord = 0;
+        let textField = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input");
+        textField.addEventListener("keydown", function(e) {
+            if(e.keyCode == 32) {
+                textField.value = wordlist[crWord];
+                crWord++;
+            }
+        });
+        break;
     // TypingTestNow
     case 2:
         // Generate wordlist
