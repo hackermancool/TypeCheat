@@ -20,6 +20,13 @@ If you go moderately fast, you will get a message asking you to do a test to con
 If you go too fast, an alert box will appear saying that they believe you have cheated.
 
 ## Use
+### Bookmarks bar
+1. [Download TypeCheat](https://github.com/hackermancool/TypeCheat/archive/master.zip)
+2. Open the `typecheat-bookmark.html` file in whatever browser you'd like.
+3. Drag and drop the item labeled "TypeCheat" into your bookmarks bar.
+4. Click the bookmark on a supported site, and TypeCheat will activate.
+
+### Copy-paste
 0. Ensure that you're on a supported site
 1. Copy the contents of [`typecheat.min.js`](https://raw.githubusercontent.com/MysteryBlokHed/TypeCheat/master/typecheat.min.js) or [`typecheat-button.min.js`]. The first will instantly run the code, and the other will create a button to be pressed first.
 2. Open the developer console (Ctrl+Shift+J on Chrome/Chromium Edge)
