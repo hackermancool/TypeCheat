@@ -16,11 +16,20 @@ If you go above a certain WPM (not sure exactly what), you will be forced to tak
 **If you use TypeCheat too much/at all on 10FastFingers, you will get banned from the site. I recommend using an alternate account for this, as if it's banned you can just delete and re-create it.**
 
 ### TypeRacer
-If you go moderately fast, you will get a message asking you to do a test to confirm your score.  
+If you go moderately fast (>100 wpm), you will get a message asking you to do a test to confirm your score.  
 If you go too fast, an alert box will appear saying that they believe you have cheated.
 
 ## Use
 ### Bookmarks bar
+#### No downloads allowed
+1. Copy the contents of [`typecheat.min.js`](https://raw.githubusercontent.com/hackermancool/TypeCheat/master/typecheat.min.js)
+2. Go to any website that you have not bookmarked
+3. Press the bookmark button and ensure that it is saved to your bookmarks bar
+4. Press the "More" button
+5. Change the url to the contents of `typecheat.min.js`
+6. Click the "TypeCheat" bookmark whenever you want to activate TypeCheat.
+
+#### Downloads allowed
 1. [Download TypeCheat](https://github.com/hackermancool/TypeCheat/archive/master.zip)
 2. Open the `typecheat-bookmark.html` file in whatever browser you'd like.
 3. Drag and drop the item labeled "TypeCheat" into your bookmarks bar.
@@ -28,7 +37,7 @@ If you go too fast, an alert box will appear saying that they believe you have c
 
 ### Copy-paste
 0. Ensure that you're on a supported site
-1. Copy the contents of [`typecheat.min.js`](https://raw.githubusercontent.com/MysteryBlokHed/TypeCheat/master/typecheat.min.js) or [`typecheat-button.min.js`]. The first will instantly run the code, and the other will create a button to be pressed first.
+1. Copy the contents of [`typecheat.min.js`](https://raw.githubusercontent.com/hackermancool/TypeCheat/master/typecheat.min.js) or [`typecheat-button.min.js`](https://raw.githubusercontent.com/hackermancool/TypeCheat/master/typecheat-button.min.js). The first will instantly run the code, and the other will create a button to be pressed first.
 2. Open the developer console (Ctrl+Shift+J on Chrome/Chromium Edge)
 3. Paste the code and press enter
 4. The text box will start to autofill the next words as they appear. Simply press `space` as fast as you would like, and the next words will appear as you do.
