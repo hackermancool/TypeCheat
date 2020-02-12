@@ -6,6 +6,7 @@ As of now, the sites that work are:
 - [10FastFingers](https://10fastfingers.com/) (Normal tests and [custom text](https://10fastfingers.com/text-practice/new))
 - [TypeRacer](https://play.typeracer.com/)
 - [TypingTestNow](https://typingtestnow.com/)
+- [Bing Typing Test](https://www.bing.com/search?q=typing+test)
 
 I am planning to add support for more.
 
@@ -30,6 +31,7 @@ If you go too fast, an alert box will appear saying that they believe you have c
 ### If you're using `typecheat-button.min.js`
 On **10FastFingers**, the button appears just **below** the text field.  
 On **TypeRacer**, the button appears **in the navbar** above the "Blog, Forum, Pit Stop, About" buttons.  
-On **TypingTestNow**, the button appears at the **top of the page** just under the navbar.
+On **TypingTestNow**, the button appears at the **top of the page** just under the navbar.  
+On **Bing Typing Test**, the button appears in the typing test item **to the right of** the "Typing test" heading.
 
 **Note: On 10FastFingers, if you end up going through the entire text, the words will continue to autofill. If you continue to press space it can cause you to get incorrect words marked, despite the text being over.**

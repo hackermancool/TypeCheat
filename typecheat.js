@@ -29,23 +29,28 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
 } else if(url == "typingtestnow.com" || url == "www.typingtestnow.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
     site = 2;
+} else if(url == "www.bing.com" || url == "bing.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
+    site = 3;
 }
+
+// Variables
+let tText, tWords, cWord, tField;
 
 // Cheat
 switch(site) {
     // 10FastFingers (Normal)
     case 0:
-        console.log("BROKEN");
         // Generate wordlist
-        let tText = document.getElementById("row1");
-        let tWords = [];
+        tText = document.getElementById("row1");
+        tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
         // Interval
-        let cWord = 0;
+        cWord = 0;
         // Different method for different modes
-        let tField = null;
+        tField = null;
         if(altMode == 0) {
             tField = document.getElementById("inputfield");
         } else if(altMode == 1) {
@@ -61,36 +66,61 @@ switch(site) {
     // TypeRacer
     case 1:
         // Generate wordlist
-        let textElement = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td");
-        let wordlist = textElement.innerText.split(" ");
+        tText = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td");
+        tWords = tText.innerText.split(" ");
         // Interval
-        let crWord = 0;
-        let textField = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input");
-        textField.addEventListener("keydown", function(e) {
+        cWord = 0;
+        tField = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input");
+        tField.addEventListener("keydown", function(e) {
             if(e.keyCode == 32) {
-                textField.value = wordlist[crWord];
-                crWord++;
+                tField.value = tWords[cWord];
+                cWord++;
             }
         });
         break;
     // TypingTestNow
     case 2:
         // Generate wordlist
-        let text = document.getElementsByClassName("sample-text")[0];
-        let words = [];
-        for(let i = 0; i < text.children.length; i++) {
-            for(let j = 0; j < text.children[i].children.length; j++) {
-                words.push(text.children[i].children[j].innerText);
+        tText = document.getElementsByClassName("sample-text")[0];
+        tWords = [];
+        for(let i = 0; i < tText.children.length; i++) {
+            for(let j = 0; j < tText.children[i].children.length; j++) {
+                words.push(tText.children[i].children[j].innerText);
             }
         }
         // Interval
-        let i = 0;
-        let field = document.getElementById("practice-input");
-        field.addEventListener("keydown", function(e) {
+        cWord = 0;
+        tField = document.getElementById("practice-input");
+        tField.addEventListener("keydown", function(e) {
             if(e.keyCode == 32) {
-                field.value = words[i];
-                i++;
+                tField.value = tWords[cWord];
+                cWord++;
             }
         });
         break;
+    // Bing Typing Test
+    case 3:
+        // Generate wordlist
+        tText = document.getElementById("edu_promptText");
+        tWords = [];
+        let workWord = "";
+        for(let i = 0; i < tText.children.length; i++) {
+            for(let j = 0; j < tText.children[i].children.length; j++) {
+                if(tText.children[i].children[j].className == "space") {
+                    tWords.push(workWord);
+                    workWord = "";
+                } else {
+                    workWord += tText.children[i].children[j].innerText;
+                }
+            }
+        }
+        // Interval
+        cWord = 0;
+        tField = document.getElementById("edu_inputText");
+        tField.addEventListener("keydown", function(e) {
+            if(e.keyCode == 32) {
+                tField.value += tWords[cWord];
+                cWord++;
+            }
+        });
 }
