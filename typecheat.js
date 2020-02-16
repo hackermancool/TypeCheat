@@ -32,6 +32,9 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
 } else if(url == "www.bing.com" || url == "bing.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
     site = 3;
+} else if(url == "www.livechatinc.com" || url == "livechatinc.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite   LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
+    site = 4;
 }
 
 // Variables
@@ -123,4 +126,27 @@ switch(site) {
                 cWord++;
             }
         });
+        break;
+    // LiveChat Inc
+    case 4:
+        // Generate wordlist
+        tText = document.getElementsByClassName("test-prompt")[0];
+        tWords = [];
+        for(let i = 0; i < tText.children.length; i++) {
+            tWords.push(tText.children[i].innerText);
+        }
+        // Interval
+        cWord = 0;
+        tField = document.getElementById("test-input");
+        tField.addEventListener("keydown", function(e) {
+            if(e.keyCode == 32) {
+                tField.innerText = tWords[cWord];
+                cWord++;
+                // The wordlist constantly updates
+                if(tText.children[tText.children.length-1].innerText != tWords.slice(-1)) {
+                    tWords.push(tText.children[tText.children.length-1].innerText);
+                }
+            }
+        });
+        break;
 }

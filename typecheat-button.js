@@ -49,6 +49,9 @@ if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
 } else if(url == "www.bing.com" || url == "bing.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
     site = 3;
+} else if(url == "www.livechatinc.com" || url == "livechatinc.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite   LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
+    site = 4;
 }
 
 // Variables
@@ -150,6 +153,30 @@ function bingCheat() {
     // Change button colour to show that it has activated
     document.getElementById("edu_answer").children[0].children[0].getElementsByTagName("button")[0].style = "color: #0F0;";
 }
+// LiveChat Inc Cheat Code
+function liveChatCheat() {
+    // Generate wordlist
+    tText = document.getElementsByClassName("test-prompt")[0];
+    tWords = [];
+    for(let i = 0; i < tText.children.length; i++) {
+        tWords.push(tText.children[i].innerText);
+    }
+    // Interval
+    cWord = 0;
+    tField = document.getElementById("test-input");
+    tField.addEventListener("keydown", function(e) {
+        if(e.keyCode == 32) {
+            tField.innerText = tWords[cWord];
+            cWord++;
+            // The wordlist constantly updates
+            if(tText.children[tText.children.length-1].innerText != tWords.slice(-1)) {
+                tWords.push(tText.children[tText.children.length-1].innerText);
+            }
+        }
+    });
+    // Change button colour to show that it has activated
+    document.getElementsByClassName("metrics")[1].children[1].style = "color: #0F0;";
+}
 
 // Cheat
 switch(site) {
@@ -172,5 +199,10 @@ switch(site) {
     case 3:
         // Create cheat button
         document.getElementById("edu_answer").children[0].children[0].innerHTML += "<button onclick=\"javascript:bingCheat();\">Start TypeCheat</button>"; 
+        break;
+    // LiveCheat Inc
+    case 4:
+        // Create cheat button
+        document.getElementsByClassName("metrics")[1].innerHTML += "<button onclick=\"javascript:liveChatCheat();\">Start TypeCheat</button>"
         break;
 }
