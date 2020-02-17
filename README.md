@@ -55,6 +55,7 @@ On **10FastFingers**, the button appears just **below** the text field.
 On **TypeRacer**, the button appears **in the navbar** above the "Blog, Forum, Pit Stop, About" buttons.  
 On **TypingTestNow**, the button appears at the **top of the page** just under the navbar.  
 On **Bing Typing Test**, the button appears in the typing test item **to the right of** the "Typing test" heading.  
-On **LiveChat Inc**, the button appears in the header **just below the countdown timer**.
+On **LiveChat Inc**, the button appears in the header **just below the countdown timer**.  
+On **QuickTypingTest**, the button appears at the **top of the page** in the navbar.  
 
 **Note: On 10FastFingers, if you end up going through the entire text, the words will continue to autofill. If you continue to press space it can cause you to get incorrect words marked, despite the text being over.**
