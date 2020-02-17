@@ -8,8 +8,9 @@ As of now, the sites that work are:
 - [TypingTestNow](https://typingtestnow.com/)
 - [Bing Typing Test](https://www.bing.com/search?q=typing+test)
 - [LiveChat Inc](https://www.livechatinc.com/typing-speed-test)
+- [QuickTypingTest](https://www.quicktypingtest.com/)
 
-I am planning to add support for more.
+I am planning to add support for more.  
 
 ## Anticheat systems
 ### 10FastFingers
@@ -19,6 +20,10 @@ If you go above a certain WPM (not sure exactly what), you will be forced to tak
 ### TypeRacer
 If you go moderately fast (>100 wpm), you will get a message asking you to do a test to confirm your score.  
 If you go too fast, an alert box will appear saying that they believe you have cheated.
+
+## Test UI Problems
+### QuickTypingTest
+On QuickTypingTest the prompt text doesn't update when holding space until you let go, but it is updating in the background will still work and count towards your WPM. Letting go of space will cause the UI to jump to the current word.
 
 ## Use
 ### Bookmarks bar

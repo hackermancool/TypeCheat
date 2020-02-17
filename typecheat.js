@@ -16,29 +16,32 @@
  *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 // Check current site
-let url = window.location.href.split("/")[2];
+let url = window.location.href.split("/")[2].replace("www.", "");
 let site = -1;
 let altMode = 0;
-if(url == "10fastfingers.com" || url == "www.10fastfingers.com") {
+if(url == "10fastfingers.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~");
     site = 0;
     if(window.location.href.split("/")[3] == "text") altMode = 1;
 } else if(url == "play.typeracer.com" || url == "typeracer.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~");
     site = 1;
-} else if(url == "typingtestnow.com" || url == "www.typingtestnow.com") {
+} else if(url == "typingtestnow.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
     site = 2;
-} else if(url == "www.bing.com" || url == "bing.com") {
+} else if(url == "bing.com") {
     console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
     site = 3;
-} else if(url == "www.livechatinc.com" || url == "livechatinc.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite   LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
+} else if(url == "livechatinc.com") {
+    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
     site = 4;
+} else if(url == "quicktypingtest.com") {
+    console.log(" ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~");
+    site = 5;
 }
 
 // Variables
-let tText, tWords, cWord, tField;
+let tText, tWords, cWord, tField, workWord;
 
 // Cheat
 switch(site) {
@@ -50,7 +53,7 @@ switch(site) {
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
-        // Interval
+        // Cheat
         cWord = 0;
         // Different method for different modes
         tField = null;
@@ -71,7 +74,7 @@ switch(site) {
         // Generate wordlist
         tText = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td");
         tWords = tText.innerText.split(" ");
-        // Interval
+        // Cheat
         cWord = 0;
         tField = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input");
         tField.addEventListener("keydown", function(e) {
@@ -91,7 +94,7 @@ switch(site) {
                 words.push(tText.children[i].children[j].innerText);
             }
         }
-        // Interval
+        // Cheat
         cWord = 0;
         tField = document.getElementById("practice-input");
         tField.addEventListener("keydown", function(e) {
@@ -106,7 +109,7 @@ switch(site) {
         // Generate wordlist
         tText = document.getElementById("edu_promptText");
         tWords = [];
-        let workWord = "";
+        workWord = "";
         for(let i = 0; i < tText.children.length; i++) {
             for(let j = 0; j < tText.children[i].children.length; j++) {
                 if(tText.children[i].children[j].className == "space") {
@@ -117,7 +120,7 @@ switch(site) {
                 }
             }
         }
-        // Interval
+        // Cheat
         cWord = 0;
         tField = document.getElementById("edu_inputText");
         tField.addEventListener("keydown", function(e) {
@@ -135,7 +138,7 @@ switch(site) {
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
-        // Interval
+        // Cheat
         cWord = 0;
         tField = document.getElementById("test-input");
         tField.addEventListener("keydown", function(e) {
@@ -146,6 +149,29 @@ switch(site) {
                 if(tText.children[tText.children.length-1].innerText != tWords.slice(-1)) {
                     tWords.push(tText.children[tText.children.length-1].innerText);
                 }
+            }
+        });
+        break;
+    // QuickTypingTest
+    case 5:
+        // Generate wordlist
+        tText = document.querySelector("#text-display");
+        tWords = [];
+        workWord = "";
+        for(let i = 0; i < tText.children.length; i++) {
+            workWord = "";
+            for(let j = 0; j < tText.children[i].children.length; j++) {
+                workWord += tText.children[i].children[j].innerText;
+            }
+            tWords.push(workWord);
+        }
+        // Cheat
+        cWord = 0;
+        tField = document.getElementById("text-input");
+        tField.addEventListener("keydown", function(e) {
+            if(e.keyCode == 32) {
+                tField.value += tWords[cWord];
+                cWord++;
             }
         });
         break;
