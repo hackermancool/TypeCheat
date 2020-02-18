@@ -103,7 +103,7 @@ switch(site) {
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             for(let j = 0; j < tText.children[i].children.length; j++) {
-                words.push(tText.children[i].children[j].innerText);
+                tWords.push(tText.children[i].children[j].innerText);
             }
         }
         // Cheat
