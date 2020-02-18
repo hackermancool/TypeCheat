@@ -36,25 +36,33 @@
 let url = window.location.href.split("/")[2].replace("www.", "");
 let site = -1;
 let altMode = 0;
-if(url == "10fastfingers.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~");
-    site = 0;
-    if(window.location.href.split("/")[3] == "text") altMode = 1;
-} else if(url == "play.typeracer.com" || url == "typeracer.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~");
-    site = 1;
-} else if(url == "typingtestnow.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
-    site = 2;
-} else if(url == "bing.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
-    site = 3;
-} else if(url == "livechatinc.com") {
-    console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
-    site = 4;
-} else if(url == "quicktypingtest.com") {
-    console.log(" ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~");
-    site = 5;
+switch(url) {
+    case "10fastfingers.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~");
+        site = 0;
+        if(window.location.href.split("/")[3] == "text") altMode = 1;
+        break;
+    case "typeracer.com":
+    case "play.typeracer.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~");
+        site = 1;
+        break;
+    case "typingtestnow.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
+        site = 2;
+        break;
+    case "bing.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
+        site = 3;
+        break;
+    case "livechatinc.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
+        site = 4;
+        break;
+    case "quicktypingtest.com":
+        console.log(" ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~");
+        site = 5;
+        break;
 }
 
 // Variables
