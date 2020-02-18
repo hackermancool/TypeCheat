@@ -63,6 +63,10 @@ switch(url) {
         console.log(" ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~");
         site = 5;
         break;
+    case "typing-speed-test.aoeu.eu":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     AOEU Test\n~~~~~~~~~~~~~~~~~~~");
+        site = 6;
+        break;
 }
 
 // Variables
@@ -180,8 +184,8 @@ function liveChatCheat() {
             tField.innerText = tWords[cWord];
             cWord++;
             // The wordlist constantly updates
-            if(tText.children[tText.children.length-1].innerText != tWords.slice(-1)) {
-                tWords.push(tText.children[tText.children.length-1].innerText);
+            if(tText.lastChild.innerText != tWords.slice(-1)) {
+                tWords.push(tText.lastChild.innerText);
             }
         }
     });
@@ -215,6 +219,27 @@ function quickTypingCheat() {
     document.getElementById("navbarResponsive").children[0].style = "width: 100%; color: #0F0;";
 }
 
+// AOEU Typing Speed Test
+function aoeuCheat() {
+    // Generate wordlist
+    tText = document.getElementById("words");
+    tWords = [];
+    for(let i = 0; i < tText.children.length; i++) {
+        tWords.push(tText.children[i].innerText);
+    }
+    // Cheat
+    cWord = 0;
+    tField = document.getElementById("input");
+    tField.addEventListener("keyup", function(e) {
+        if(e.keyCode == 32) {
+            tField.value = tWords[cWord];
+            cWord++;
+        }
+    });
+    // Change button colour to show that it has activated
+    document.getElementById("score").lastChild.style = "color: #0F0;";
+}
+
 // Cheat
 switch(site) {
     // 10FastFingers (Normal)
@@ -245,5 +270,9 @@ switch(site) {
     // QuickTypingTest
     case 5:
         document.getElementById("navbarResponsive").innerHTML = "<button style=\"width: 100%;\" onclick=\"javascript:quickTypingCheat();\">Start TypeCheat</button>" + document.getElementById("navbarResponsive").innerHTML;
+        break;
+    // AOEU Typing Speed Test
+    case 6:
+        document.getElementById("score").innerHTML += "<button onclick=\"javascript:aoeuCheat();\">Start TypeCheat</button>"
         break;
 }
