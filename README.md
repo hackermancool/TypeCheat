@@ -28,15 +28,18 @@ On QuickTypingTest the prompt text doesn't update when holding space until you l
 
 ## Use
 ### Bookmarks bar
-#### No downloads allowed
+#### Copy-paste into bookmark
 1. Copy the contents of [`typecheat.min.js`](https://raw.githubusercontent.com/hackermancool/TypeCheat/master/typecheat.min.js)
 2. Go to any website that you have not bookmarked
 3. Press the bookmark button and ensure that it is saved to your bookmarks bar
 4. Press the "More" button
-5. Change the url to the contents of `typecheat.min.js`
-6. Click the "TypeCheat" bookmark whenever you want to activate TypeCheat.
+5. Remove the URL
+6. Write "`javascript:`" in the URL box
+7. Paste the contents of `typecheat.min.js` after `javascript:` in the URL
+8. Save the bookmark
+9. Click the "TypeCheat" bookmark on a supported site whenever you want to activate TypeCheat.
 
-#### Downloads allowed
+#### Drag-and-drop bookmark
 1. [Download TypeCheat](https://github.com/hackermancool/TypeCheat/archive/master.zip)
 2. Open the `typecheat-bookmark.html` file in whatever browser you'd like.
 3. Drag and drop the item labeled "TypeCheat" into your bookmarks bar.
