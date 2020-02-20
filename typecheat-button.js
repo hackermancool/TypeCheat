@@ -67,6 +67,10 @@ switch(url) {
         console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     AOEU Test\n~~~~~~~~~~~~~~~~~~~");
         site = 6;
         break;
+    case "indiatyping.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  India Typing\n~~~~~~~~~~~~~~~~~~~");
+        site = 7;
+        break;
 }
 
 // Variables
@@ -240,6 +244,27 @@ function aoeuCheat() {
     document.getElementById("score").lastChild.style = "color: #0F0;";
 }
 
+// India Typing
+function indiaTypingCheat() {
+    // Generate wordlist
+    tText = document.getElementById("blockrandom").contentDocument.getElementById("unicodeText");
+    tWords = [];
+    for(let i = 0; i < tText.children.length; i++) {
+        tWords.push(tText.children[i].innerText);
+    }
+    // Cheat
+    cWord = 0;
+    tField = document.getElementById("blockrandom").contentDocument.getElementById("toType");
+    tField.addEventListener("keyup", function(e) {
+        if(e.keyCode == 32) {
+            tField.value += tWords[cWord];
+            cWord++;
+        }
+    });
+    // Change button colour to show that it has activated
+    document.getElementsByClassName("t3-sidebar")[0].children[0].style = "color: #0F0;";
+}
+
 // Cheat
 switch(site) {
     // 10FastFingers (Normal)
@@ -265,7 +290,7 @@ switch(site) {
     // LiveCheat Inc
     case 4:
         // Create cheat button
-        document.getElementsByClassName("metrics")[1].innerHTML += "<button onclick=\"javascript:liveChatCheat();\">Start TypeCheat</button>"
+        document.getElementsByClassName("metrics")[1].innerHTML += "<button onclick=\"javascript:liveChatCheat();\">Start TypeCheat</button>";
         break;
     // QuickTypingTest
     case 5:
@@ -273,6 +298,10 @@ switch(site) {
         break;
     // AOEU Typing Speed Test
     case 6:
-        document.getElementById("score").innerHTML += "<button onclick=\"javascript:aoeuCheat();\">Start TypeCheat</button>"
+        document.getElementById("score").innerHTML += "<button onclick=\"javascript:aoeuCheat();\">Start TypeCheat</button>";
+        break;
+    // India Typing
+    case 7:
+        document.getElementsByClassName("t3-sidebar")[0].innerHTML = "<button onclick=\"javascript:indiaTypingCheat();\">Start TypeCheat</button>";
         break;
 }

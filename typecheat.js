@@ -50,6 +50,10 @@ switch(url) {
         console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     AOEU Test\n~~~~~~~~~~~~~~~~~~~");
         site = 6;
         break;
+    case "indiatyping.com":
+        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  India Typing\n~~~~~~~~~~~~~~~~~~~");
+        site = 7;
+        break;
 }
 
 // Variables
@@ -201,6 +205,24 @@ switch(site) {
         tField.addEventListener("keyup", function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
+                cWord++;
+            }
+        });
+        break;
+    // India Typing
+    case 7:
+        // Generate wordlist
+        tText = document.getElementById("blockrandom").contentDocument.getElementById("unicodeText");
+        tWords = [];
+        for(let i = 0; i < tText.children.length; i++) {
+            tWords.push(tText.children[i].innerText);
+        }
+        // Cheat
+        cWord = 0;
+        tField = document.getElementById("blockrandom").contentDocument.getElementById("toType");
+        tField.addEventListener("keyup", function(e) {
+            if(e.keyCode == 32) {
+                tField.value += tWords[cWord];
                 cWord++;
             }
         });

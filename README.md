@@ -6,10 +6,11 @@ As of now, the sites that work are:
 - [10FastFingers](https://10fastfingers.com/) (Normal tests and [custom text](https://10fastfingers.com/text-practice/new))
 - [TypeRacer](https://play.typeracer.com/)
 - [TypingTestNow](https://typingtestnow.com/)
-- [Bing Typing Test](https://www.bing.com/search?q=typing+test/)
+- [Bing Typing Test](https://www.bing.com/search?q=typing+test)
 - [LiveChat Inc](https://www.livechatinc.com/typing-speed-test/)
 - [QuickTypingTest](https://www.quicktypingtest.com/)
 - [AOEU Typing Speed Test](https://typing-speed-test.aoeu.eu/)
+- [India Typing](http://indiatyping.com/index.php/typing-test/english-typing-test)
 
 I am planning to add support for more.  
 
@@ -62,5 +63,6 @@ On **Bing Typing Test**, the button appears in the typing test item **to the rig
 On **LiveChat Inc**, the button appears in the header **just below the countdown timer**.  
 On **QuickTypingTest**, the button appears at the **top of the page** in the navbar.  
 On **AOEU Typing Speed Test**, the button appears **just above the text prompt** to the right of the flags.  
+On **India Typing**, the button appears **to the right of the test frame**.  
 
 **Note: On 10FastFingers, if you end up going through the entire text, the words will continue to autofill. If you continue to press space it can cause you to get incorrect words marked, despite the text being over.**
