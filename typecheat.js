@@ -16,42 +16,42 @@
  *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 // Check current site
-let url = window.location.href.split("/")[2].replace("www.", "");
+let url = window.location.href.split('/')[2].replace('www.', '');
 let site = -1;
 let altMode = 0;
 switch(url) {
-    case "10fastfingers.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~");
+    case '10fastfingers.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: 10FastFingers\n~~~~~~~~~~~~~~~~~~~');
         site = 0;
-        if(window.location.href.split("/")[3] == "text") altMode = 1;
+        if(window.location.href.split('/')[3] == 'text') altMode = 1;
         break;
-    case "typeracer.com":
-    case "play.typeracer.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~");
+    case 'typeracer.com':
+    case 'play.typeracer.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     TypeRacer\n~~~~~~~~~~~~~~~~~~~');
         site = 1;
         break;
-    case "typingtestnow.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~");
+    case 'typingtestnow.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite: TypingTestNow\n~~~~~~~~~~~~~~~~~~~');
         site = 2;
         break;
-    case "bing.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~");
+    case 'bing.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~');
         site = 3;
         break;
-    case "livechatinc.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~");
+    case 'livechatinc.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~');
         site = 4;
         break;
-    case "quicktypingtest.com":
-        console.log(" ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~");
+    case 'quicktypingtest.com':
+        console.log(' ~~~~~~~~~~~~~~~~~~~\n  TypeCheat Active! \nSite: QuickTypingTest\n ~~~~~~~~~~~~~~~~~~~');
         site = 5;
         break;
-    case "typing-speed-test.aoeu.eu":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     AOEU Test\n~~~~~~~~~~~~~~~~~~~");
+    case 'typing-speed-test.aoeu.eu':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     AOEU Test\n~~~~~~~~~~~~~~~~~~~');
         site = 6;
         break;
-    case "indiatyping.com":
-        console.log("~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  India Typing\n~~~~~~~~~~~~~~~~~~~");
+    case 'indiatyping.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  India Typing\n~~~~~~~~~~~~~~~~~~~');
         site = 7;
         break;
 }
@@ -64,7 +64,7 @@ switch(site) {
     // 10FastFingers (Normal)
     case 0:
         // Generate wordlist
-        tText = document.getElementById("row1");
+        tText = document.getElementById('row1');
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
@@ -74,11 +74,11 @@ switch(site) {
         // Different method for different modes
         tField = null;
         if(altMode == 0) {
-            tField = document.getElementById("inputfield");
+            tField = document.getElementById('inputfield');
         } else if(altMode == 1) {
-            tField = document.getElementById("text_typed");
+            tField = document.getElementById('text_typed');
         }
-        tField.addEventListener("keyup", function(e) {
+        tField.addEventListener('keyup', function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
                 cWord++;
@@ -88,12 +88,12 @@ switch(site) {
     // TypeRacer
     case 1:
         // Generate wordlist
-        tText = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td");
-        tWords = tText.innerText.split(" ");
+        tText = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td');
+        tWords = tText.innerText.split(' ');
         // Cheat
         cWord = 0;
-        tField = document.querySelector("#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input");
-        tField.addEventListener("keydown", function(e) {
+        tField = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input');
+        tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
                 cWord++;
@@ -103,7 +103,7 @@ switch(site) {
     // TypingTestNow
     case 2:
         // Generate wordlist
-        tText = document.getElementsByClassName("sample-text")[0];
+        tText = document.getElementsByClassName('sample-text')[0];
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             for(let j = 0; j < tText.children[i].children.length; j++) {
@@ -112,8 +112,8 @@ switch(site) {
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("practice-input");
-        tField.addEventListener("keydown", function(e) {
+        tField = document.getElementById('practice-input');
+        tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
                 cWord++;
@@ -123,14 +123,14 @@ switch(site) {
     // Bing Typing Test
     case 3:
         // Generate wordlist
-        tText = document.getElementById("edu_promptText");
+        tText = document.getElementById('edu_promptText');
         tWords = [];
-        workWord = "";
+        workWord = '';
         for(let i = 0; i < tText.children.length; i++) {
             for(let j = 0; j < tText.children[i].children.length; j++) {
-                if(tText.children[i].children[j].className == "space") {
+                if(tText.children[i].children[j].className == 'space') {
                     tWords.push(workWord);
-                    workWord = "";
+                    workWord = '';
                 } else {
                     workWord += tText.children[i].children[j].innerText;
                 }
@@ -138,8 +138,8 @@ switch(site) {
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("edu_inputText");
-        tField.addEventListener("keydown", function(e) {
+        tField = document.getElementById('edu_inputText');
+        tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.value += tWords[cWord];
                 cWord++;
@@ -149,15 +149,15 @@ switch(site) {
     // LiveChat Inc
     case 4:
         // Generate wordlist
-        tText = document.getElementsByClassName("test-prompt")[0];
+        tText = document.getElementsByClassName('test-prompt')[0];
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("test-input");
-        tField.addEventListener("keydown", function(e) {
+        tField = document.getElementById('test-input');
+        tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.innerText = tWords[cWord];
                 cWord++;
@@ -171,11 +171,11 @@ switch(site) {
     // QuickTypingTest
     case 5:
         // Generate wordlist
-        tText = document.querySelector("#text-display");
+        tText = document.querySelector('#text-display');
         tWords = [];
-        workWord = "";
+        workWord = '';
         for(let i = 0; i < tText.children.length; i++) {
-            workWord = "";
+            workWord = '';
             for(let j = 0; j < tText.children[i].children.length; j++) {
                 workWord += tText.children[i].children[j].innerText;
             }
@@ -183,8 +183,8 @@ switch(site) {
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("text-input");
-        tField.addEventListener("keydown", function(e) {
+        tField = document.getElementById('text-input');
+        tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.value += tWords[cWord];
                 cWord++;
@@ -194,15 +194,15 @@ switch(site) {
     // AOEU Typing Speed Test
     case 6:
         // Generate wordlist
-        tText = document.getElementById("words");
+        tText = document.getElementById('words');
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("input");
-        tField.addEventListener("keyup", function(e) {
+        tField = document.getElementById('input');
+        tField.addEventListener('keyup', function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];
                 cWord++;
@@ -212,15 +212,15 @@ switch(site) {
     // India Typing
     case 7:
         // Generate wordlist
-        tText = document.getElementById("blockrandom").contentDocument.getElementById("unicodeText");
+        tText = document.getElementById('blockrandom').contentDocument.getElementById('unicodeText');
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);
         }
         // Cheat
         cWord = 0;
-        tField = document.getElementById("blockrandom").contentDocument.getElementById("toType");
-        tField.addEventListener("keyup", function(e) {
+        tField = document.getElementById('blockrandom').contentDocument.getElementById('toType');
+        tField.addEventListener('keyup', function(e) {
             if(e.keyCode == 32) {
                 tField.value += tWords[cWord];
                 cWord++;
