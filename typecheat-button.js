@@ -270,38 +270,38 @@ switch(site) {
     // 10FastFingers (Normal)
     case 0:
         // Create cheat button
-        document.getElementById('ads-speedtest-view-container').innerHTML = '<button style=\'width: 100%;\' onclick=\'javascript:tenFastCheat();\'>Start TypeCheat</button>';
+        document.getElementById('ads-speedtest-view-container').innerHTML = '<button style="width: 100%;" onclick="tenFastCheat();">Start TypeCheat</button>';
         break;
     // TypeRacer
     case 1:
         // Create cheat button
-        document.getElementsByClassName('navigation')[0].innerHTML = '<button style=\'width: 100%;\' onclick=\'javascript:typeRacerCheat();\'>Start TypeCheat</button>' + document.getElementsByClassName('navigation')[0].innerHTML;
+        document.getElementsByClassName('navigation')[0].innerHTML = '<button style="width: 100%;" onclick="typeRacerCheat();">Start TypeCheat</button>' + document.getElementsByClassName('navigation')[0].innerHTML;
         break;
     // TypingTestNow
     case 2:
         // Create cheat button
-        document.getElementsByClassName('row')[0].innerHTML = '<button style=\'width: 100%;\' onclick=\'javascript:typingTestNowCheat();\'>Start TypeCheat</button>'
+        document.getElementsByClassName('row')[0].innerHTML = '<button style="width: 100%;" onclick="typingTestNowCheat();">Start TypeCheat</button>'
         break;
     // Bing Typing Test
     case 3:
         // Create cheat button
-        document.getElementById('edu_answer').children[0].children[0].innerHTML += '<button onclick=\'javascript:bingCheat();\'>Start TypeCheat</button>'; 
+        document.getElementById('edu_answer').children[0].children[0].innerHTML += '<button onclick="bingCheat();">Start TypeCheat</button>'; 
         break;
     // LiveCheat Inc
     case 4:
         // Create cheat button
-        document.getElementsByClassName('metrics')[1].innerHTML += '<button onclick=\'javascript:liveChatCheat();\'>Start TypeCheat</button>';
+        document.getElementsByClassName('metrics')[1].innerHTML += '<button onclick="liveChatCheat();">Start TypeCheat</button>';
         break;
     // QuickTypingTest
     case 5:
-        document.getElementById('navbarResponsive').innerHTML = '<button style=\'width: 100%;\' onclick=\'javascript:quickTypingCheat();\'>Start TypeCheat</button>' + document.getElementById('navbarResponsive').innerHTML;
+        document.getElementById('navbarResponsive').innerHTML = '<button style="width: 100%;" onclick="quickTypingCheat();">Start TypeCheat</button>' + document.getElementById('navbarResponsive').innerHTML;
         break;
     // AOEU Typing Speed Test
     case 6:
-        document.getElementById('score').innerHTML += '<button onclick=\'javascript:aoeuCheat();\'>Start TypeCheat</button>';
+        document.getElementById('score').innerHTML += '<button onclick="aoeuCheat();">Start TypeCheat</button>';
         break;
     // India Typing
     case 7:
-        document.getElementsByClassName('t3-sidebar')[0].innerHTML = '<button onclick=\'javascript:indiaTypingCheat();\'>Start TypeCheat</button>';
+        document.getElementsByClassName('t3-sidebar')[0].innerHTML = '<button onclick="indiaTypingCheat();">Start TypeCheat</button>';
         break;
 }
