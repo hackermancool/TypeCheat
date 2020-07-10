@@ -38,8 +38,8 @@ switch(url) {
         console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~');
         site = 3;
         break;
-    case 'livechatinc.com':
-        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~');
+    case 'livechat.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat\n~~~~~~~~~~~~~~~~~~~');
         site = 4;
         break;
     case 'quicktypingtest.com':
@@ -146,7 +146,7 @@ switch(site) {
             }
         });
         break;
-    // LiveChat Inc
+    // LiveChat
     case 4:
         // Generate wordlist
         tText = document.getElementsByClassName('test-prompt')[0];

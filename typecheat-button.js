@@ -15,23 +15,6 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-/*
- *    TypeCheat - A JS script to cheat on certain online typing tests
- *    Copyright (C) 2020  Adam Thompson-Sharpe
- *
- *    This program is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
- *
- *    This program is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
- *
- *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
 // Check current site
 let url = window.location.href.split('/')[2].replace('www.', '');
 let site = -1;
@@ -55,8 +38,8 @@ switch(url) {
         console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:     Bing Test\n~~~~~~~~~~~~~~~~~~~');
         site = 3;
         break;
-    case 'livechatinc.com':
-        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat Inc\n~~~~~~~~~~~~~~~~~~~');
+    case 'livechat.com':
+        console.log('~~~~~~~~~~~~~~~~~~~\n TypeCheat Active! \nSite:  LiveChat\n~~~~~~~~~~~~~~~~~~~');
         site = 4;
         break;
     case 'quicktypingtest.com':
@@ -172,7 +155,7 @@ function bingCheat() {
     // Change button colour to show that it has activated
     document.getElementById('edu_answer').children[0].children[0].getElementsByTagName('button')[0].style = 'color: #0F0;';
 }
-// LiveChat Inc
+// LiveChat
 function liveChatCheat() {
     // Generate wordlist
     tText = document.getElementsByClassName('test-prompt')[0];
