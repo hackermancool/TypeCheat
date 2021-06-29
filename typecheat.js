@@ -88,11 +88,11 @@ switch(site) {
     // TypeRacer
     case 1:
         // Generate wordlist
-        tText = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td');
+        tText = document.querySelector('.inputPanel').firstChild.firstChild.firstChild.firstChild.firstChild.firstChild;
         tWords = tText.innerText.split(' ');
         // Cheat
         cWord = 0;
-        tField = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input');
+        tField = document.querySelector('.txtInput');
         tField.addEventListener('keydown', function(e) {
             if(e.keyCode == 32) {
                 tField.value = tWords[cWord];

@@ -89,11 +89,11 @@ function tenFastCheat() {
 // TypeRacer
 function typeRacerCheat() {
     // Generate wordlist
-    tText = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td');
+    tText = document.querySelector('.inputPanel').firstChild.firstChild.firstChild.firstChild.firstChild.firstChild;
     tWords = tText.innerText.split(' ');
     // Cheat
     cWord = 0;
-    tField = document.querySelector('#gwt-uid-15 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input');
+    tField = document.querySelector('.txtInput');
     tField.addEventListener('keydown', function(e) {
         if(e.keyCode == 32) {
             tField.value = tWords[cWord];
@@ -258,7 +258,7 @@ switch(site) {
     // TypeRacer
     case 1:
         // Create cheat button
-        document.getElementsByClassName('navigation')[0].innerHTML = '<button style="width: 100%;" onclick="typeRacerCheat();">Start TypeCheat</button>' + document.getElementsByClassName('navigation')[0].innerHTML;
+        document.getElementsByClassName('navigation')[0].innerHTML = '<button style="width: 50%;" onclick="typeRacerCheat();">Start TypeCheat</button>' + document.getElementsByClassName('navigation')[0].innerHTML;
         break;
     // TypingTestNow
     case 2:
