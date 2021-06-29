@@ -149,7 +149,7 @@ switch(site) {
     // LiveChat
     case 4:
         // Generate wordlist
-        tText = document.getElementsByClassName('test-prompt')[0];
+        tText = document.getElementsByClassName('tst-input-wrapper')[1];
         tWords = [];
         for(let i = 0; i < tText.children.length; i++) {
             tWords.push(tText.children[i].innerText);

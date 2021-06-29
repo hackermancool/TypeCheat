@@ -158,7 +158,7 @@ function bingCheat() {
 // LiveChat
 function liveChatCheat() {
     // Generate wordlist
-    tText = document.getElementsByClassName('test-prompt')[0];
+    tText = document.getElementsByClassName('tst-input-wrapper')[1];
     tWords = [];
     for(let i = 0; i < tText.children.length; i++) {
         tWords.push(tText.children[i].innerText);
@@ -177,7 +177,7 @@ function liveChatCheat() {
         }
     });
     // Change button colour to show that it has activated
-    document.getElementsByClassName('metrics')[1].children[1].style = 'color: #0F0;';
+    document.querySelector('.u-flex.u-flex-col-rev').children[2].style = 'color: #0F0;';
 }
 
 // QuickTypingTest
@@ -273,7 +273,7 @@ switch(site) {
     // LiveCheat Inc
     case 4:
         // Create cheat button
-        document.getElementsByClassName('metrics')[1].innerHTML += '<button onclick="liveChatCheat();">Start TypeCheat</button>';
+        document.querySelector('.u-flex.u-flex-col-rev').innerHTML += '<button onclick="liveChatCheat();">Start TypeCheat</button>';
         break;
     // QuickTypingTest
     case 5:
